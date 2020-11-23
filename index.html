@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form-Validator</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" id="form" class="form">
+            <h2>Register With Us</h2>
+            <div class="from-control">
+              <label for="username">UserName</label>
+              <input id="username" type="text" placeholder="Enter UserName">
+              <small>Error Message</small>
+            </div>
+            <div class="from-control">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Enter Email">
+                <small>Error Message</small>
+            </div>
+            <div class="from-control">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Enter Password">
+                <small>Error Message</small>
+            </div>
+            <div class="from-control">
+                <label for="password1">confirm password</label>
+                <input id="password1" type="password" placeholder="Enter Password again">
+                <small>Error Message</small>
+            </div>
+            <button>submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form-Validator</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+    :root {
+        --success-color: #2ecc71;
+        --error-color: #e74c3c;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: red;
+        font-family: 'open sans ', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        width: 400px;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 0 0 20px;
+    }
+
+    .form {
+        padding: 30px 40px;
+    }
+
+    .from-control {
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+        position: relative;
+    }
+
+    .from-control label {
+        display: block;
+        color: #777;
+    }
+
+    .from-control input {
+        border: 2px solid #f0f0f0;
+        border-radius: 4px;
+        width: 100%;
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .from-control input:focus {
+        outline: 0;
+        border-color: #777;
+    }
+
+    .from-control.success input {
+        border-color: var(--success-color);
+    }
+
+    .from-control.error input {
+        border-color: var(--error-color);
+    }
+
+    .from-control small {
+        color: var(--error-color);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+    }
+
+    .from-control.error small {
+        visibility: visible;
+    }
+
+    .form button {
+        cursor: pointer;
+        background-color: #3498db;
+        border: 2px solid #3498db;
+        border-radius: 4px;
+        color:#fff;
+        display: block;
+        font-size: 16px;
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <form action="" id="form" class="form">
+            <h2>Register With Us</h2>
+            <div class="from-control"><label for="name">Name</label><input id="name" type="text"
+                    placeholder="Enter Name"><small>Error Message</small></div>
+            <div class="from-control"><label for="date_of_birth">date of birth</label><input id="date_of_birth"
+                    type="text" placeholder="date of birth">
+                <small>Error Message</small></div>
+            <div class="from-control">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Enter Email">
+                <small>Error Message</small>
+            </div>
+            <label for="Hobbies">Hobbies</label><br>
+            <input type="checkbox" id="swimming" name="swimming" value="swimming">
+            <label for="swimming"> swimming</label>
+            <input type="checkbox" id="bike" name="bike" value="bike">
+            <label for="bike"> bike race</label><br>
+            <input type="checkbox" id="tabble_tennis" name="tabble_tennis" value="tabble_tennis">
+            <label for="vehicle3"> playing tabble tennis</label>
+            <button>submit</button>
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById('form')
+        const username = document.getElementById('name')
+        const email = document.getElementById('email')
+        const date_of_birth = document.getElementById('date_of_birth')
+        function showError(input, message) {
+            const formcontrol = input.parentElement;
+            formcontrol.className = 'from-control error'
+            const small = formcontrol.querySelector('small')
+            small.innerHTML = message;
+        }
+        function showSuccess(input) {
+            const formcontrol = input.parentElement;
+            formcontrol.className = 'from-control success'
+        }
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (username.value === "") {
+                showError(username, 'username is required')
+            } else {
+                showSuccess(username);
+            }
+            if (email.value === "") {
+                showError(email, "email is required")
+            } else {
+                showSuccess(email)
+            }
+            if (date_of_birth.value === "") {
+                showError(date_of_birth, "age should be greater than 22")
+            } else if (date_of_birth.value > 22) {
+                showSuccess(date_of_birth)
+            }
+        });</script>
+</body>
+
+</html> -->
